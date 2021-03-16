@@ -1,0 +1,59 @@
+
+    
+    /* O Cabeçalho número 1 */
+.um { /* Classe para o cabeçalho */
+    width:500px; /* Largura total - Se você omitir 
+    ocupará toda a linha */
+    font: 25px Arial, Helvetica, sans-serif; /* Tamanho e 
+    família de fontes */
+    color: #d877c3; /* Cor da fonte */
+    border-top: 14px solid #3fb1e6; /* Borda em cima */
+    border-left: 2px solid #3fb1e6; /* Borda a esquerda*/
+    padding-left:5px; /* Espaçamento do texto a esquerda */
+    text-align: center;
+    } /* Note que não há uma cor de fundo */
+
+.dois {  /* Classe para o cabeçalho */
+    width:500px; /* Largura total - Se você omitir ocupará toda a linha */
+    font: 20px Arial, Helvetica, sans-serif; /* Tamanho e família de fontes */
+    color: #3fb1e6; /* Cor da fonte */
+    border-top: 5px dotted #d877c3; /* Borda em cima */
+    border-bottom: 15px solid #d877c3; /* Borda em baixo */
+    padding-left:5px; /* Espaçamento do texto a esquerda */
+    } /* Note que não há uma cor de fundo */
+        
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #3fb1e6;
+    color: #d877c3;
+    width: 500px;
+    height: 50px;    
+    font: 25px Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 50px;
+    }
+.subt{
+    color: #3fb1e6;
+    font: 18px Arial, Helvetica, sans-serif;
+    }    
+.subt2{
+    color: #176386;
+    font: 15px Arial, Helvetica, sans-serif;
+    }    
+table, th, td {
+    border: 1px solid #176386;
+    }    
+
+th, td {
+    padding: 7px;
+    }
+div {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    }
+img {
+    display: flex; 
+     }
