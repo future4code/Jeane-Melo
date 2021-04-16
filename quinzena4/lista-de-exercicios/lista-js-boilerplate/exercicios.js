@@ -30,7 +30,18 @@ function retornaNumerosParesElevadosADois (array) {
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
+   let numElementos = array.length
+   let arrayDePares = []
+   let j=0
+   for (let i=0; i<numElementos; i++) {
+      if ((array[i]%2) === 0) {
+         arrayDePares[j] = array[i]
+         j+=1
+      } 
+   }
+   return arrayDePares
 }
+
 
 //Exercício 4
 
