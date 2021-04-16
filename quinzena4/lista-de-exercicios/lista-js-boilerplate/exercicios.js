@@ -97,6 +97,15 @@ function retornaNNumerosPares(n) {
 
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
+  let tipoDeTriangulo =""
+  if ((a === b) && (b === c)){
+     tipoDeTriangulo ="Equilátero"
+  } else if ((a === b) || (b === c)) {
+   tipoDeTriangulo ="Isósceles"
+  } else {
+   tipoDeTriangulo ="Escaleno"
+  }
+  return tipoDeTriangulo
 }
 
 // Exercício 9
