@@ -86,6 +86,11 @@ function retornaExpressoesBooleanas() {
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
+   let arrayNNumerosPares = []
+   for (let i=0; i<n; i++) {
+      arrayNNumerosPares[i] = (2*i)
+      } 
+   return arrayNNumerosPares
 }
 
 // Exercício 8
