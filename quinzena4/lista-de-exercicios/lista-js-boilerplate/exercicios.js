@@ -19,7 +19,7 @@ function retornaNumerosParesElevadosADois (array) {
    let j=0
    for (let i=0; i<numElementos; i++) {
       if ((array[i]%2) === 0) {
-         arrayParesAoQuadrado = (array[i] * array[i])
+         arrayParesAoQuadrado[j] = (array[i] * array[i])
          j+=1
       } 
    }
