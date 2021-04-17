@@ -113,9 +113,8 @@ function checaTriangulo(a, b, c) {
 function comparaDoisNumeros(num1, num2) {
 // implemente sua lógica aqui
 
- let maior = 0
- let menor = 0
- let maiorNumeroR = 0
+ let maior 
+ let menor 
  let maiorDivisivelPorMenorR = false
  let diferencaR = 0
 
@@ -126,26 +125,25 @@ function comparaDoisNumeros(num1, num2) {
     maior = num2
     menor = num1
  }
- maiorNumeroR = maior
  diferencaR = (maior - menor)
  if ((maior%menor) === 0) {
     maiorDivisivelPorMenorR = true
  }
- const resultadoDaComparacao = {
-   maiorNumero: maiorNumeroR,
-   maiorDivisivelPorMenor: maiorDivisivelPorMenorR,
-   diferenca: diferencaR
+ 
+return {
+   maiorNumero: maior,
+   maiorDivisivelporMenor: maiorDivisivelPorMenorR,
+   diferenca: (maior-menor)
  }
-return resultadoDaComparacao
 }
 
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
-   let segundoMaior = array[0]
+  /* let segundoMaior = array[0]
    let segundoMenor = array[0]
-   let arraySegundoMaiorEMenor =[]
+   let arrayResposta =[]
    let numElementos = array.length
    let maiorElemento = array[0]
    let indiceMaior = 0
@@ -157,25 +155,49 @@ function segundoMaiorEMenor(array) {
          indiceMaior = i
       } 
    }
-   for (let i=0; i<numElementos; i++) {
-      if (array[i] < menorElemento) {
-         menorElemento = array[i]
-         indiceMenor = i
+   for (let j=0; j<numElementos; j++) {
+      if (array[j] < menorElemento) {
+         menorElemento = array[j]
+         indiceMenor = j
       } 
    }
    for (let i=0;  i<numElementos; i++){
-      if ((array[i]> segundoMaior) && (i!== indiceMaior)) {
-         segundoMaior = array[i]
+      if (array[i] >= segundoMaior){
+         if (i !== indiceMaior) {
+            segundoMaior = array[i]
+         }
       } 
    }
-   for (let i=0; i<numElementos; i++){
-      if ((array[i] < segundoMenor) && (i !== indiceMenor)) {
-         segundoMenor = array[i]
+   for (let j=0; j<numElementos; j++){
+      if (array[j] <= segundoMenor){
+         if (j !== indiceMenor) {
+         segundoMenor = array[j]
+         }
       } 
    }
-   arraySegundoMaiorEMenor[0] = segundoMaior
-   arraySegundoMaiorEMenor[1] = segundoMenor
-   return arraySegundoMaiorEMenor
+   arrayResposta[0] = segundoMaior
+   arrayResposta[1] = segundoMenor
+   return arrayResposta */
+
+
+ let numElementos = array.length
+   let arrayOrdenado = []
+   let chaveAtual 
+   let indiceWhile
+   let arrayResposta =[]
+   for (let j=1; j<numElementos; j++){
+      chaveAtual = array[j]
+      indiceWhile = j-1
+      while ((indiceWhile>-1) && (array[indiceWhile] > chaveAtual)) {
+         array[indiceWhile + 1] = array[indiceWhile]
+         indiceWhile = indiceWhile -1
+      }
+      array[indiceWhile+1] = chaveAtual
+   }
+   arrayResposta[0]= array[numElementos-2]
+   arrayResposta[1]= array[1]
+return arrayResposta
+
 }
 
 //Exercício 11
