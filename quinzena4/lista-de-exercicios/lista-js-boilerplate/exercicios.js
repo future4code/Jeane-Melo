@@ -116,8 +116,6 @@ function comparaDoisNumeros(num1, num2) {
  let maior 
  let menor 
  let maiorDivisivelPorMenorR = false
- let diferencaR = 0
-
  if (num1 >= num2) {
     maior = num1
     menor = num2
@@ -125,7 +123,6 @@ function comparaDoisNumeros(num1, num2) {
     maior = num2
     menor = num1
  }
- diferencaR = (maior - menor)
  if ((maior%menor) === 0) {
     maiorDivisivelPorMenorR = true
  }
@@ -225,6 +222,13 @@ return array
 
 function filmeFavorito() {
    // implemente sua lógica aqui
+   
+   return {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: "David Frankel",
+      atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"]
+   }
 }
 
 // Exercício 13
