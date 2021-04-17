@@ -111,19 +111,92 @@ function checaTriangulo(a, b, c) {
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
+// implemente sua lógica aqui
+
+ let maior = 0
+ let menor = 0
+ let maiorNumeroR = 0
+ let maiorDivisivelPorMenorR = false
+ let diferencaR = 0
+
+ if (num1 >= num2) {
+    maior = num1
+    menor = num2
+ } else {
+    maior = num2
+    menor = num1
+ }
+ maiorNumeroR = maior
+ diferencaR = (maior - menor)
+ if ((maior%menor) === 0) {
+    maiorDivisivelPorMenorR = true
+ }
+ const resultadoDaComparacao = {
+   maiorNumero: maiorNumeroR,
+   maiorDivisivelPorMenor: maiorDivisivelPorMenorR,
+   diferenca: diferencaR
+ }
+return resultadoDaComparacao
 }
 
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
+   let segundoMaior = array[0]
+   let segundoMenor = array[0]
+   let arraySegundoMaiorEMenor =[]
+   let numElementos = array.length
+   let maiorElemento = array[0]
+   let indiceMaior = 0
+   let menorElemento = array[0]
+   let indiceMenor = 0
+   for (let i=0; i<numElementos; i++) {
+      if (array[i] > maiorElemento) {
+         maiorElemento = array[i]
+         indiceMaior = i
+      } 
+   }
+   for (let i=0; i<numElementos; i++) {
+      if (array[i] < menorElemento) {
+         menorElemento = array[i]
+         indiceMenor = i
+      } 
+   }
+   for (let i=0;  i<numElementos; i++){
+      if ((array[i]> segundoMaior) && (i!== indiceMaior)) {
+         segundoMaior = array[i]
+      } 
+   }
+   for (let i=0; i<numElementos; i++){
+      if ((array[i] < segundoMenor) && (i !== indiceMenor)) {
+         segundoMenor = array[i]
+      } 
+   }
+   arraySegundoMaiorEMenor[0] = segundoMaior
+   arraySegundoMaiorEMenor[1] = segundoMenor
+   return arraySegundoMaiorEMenor
 }
 
 //Exercício 11
 
 function ordenaArray(array) {
    // implemente sua lógica aqui
+   let numElementos = array.length
+   let arrayOrdenado = []
+   let chaveAtual 
+   let indiceWhile
+   for (let j=1; j<numElementos; j++){
+      chaveAtual = array[j]
+      indiceWhile = j-1
+      while ((indiceWhile>-1) && (array[indiceWhile] > chaveAtual)) {
+         array[indiceWhile + 1] = array[indiceWhile]
+         indiceWhile = indiceWhile -1
+      }
+      array[indiceWhile+1] = chaveAtual
+   }
+return array
+
 }
 
 // Exercício 12
