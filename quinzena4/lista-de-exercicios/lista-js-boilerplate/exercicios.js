@@ -311,18 +311,43 @@ const arrayDePessoas = [
  
  function multiplicaArrayPor2(array) {
     // implemente sua lógica aqui
+    arrayResposta =[]
+    let numElementos = array.length
+    for (let i=0; i<numElementos; i++) {
+       arrayResposta[i] = (array[i]*2)
+      } 
+    return arrayResposta
  }
  
  // Exercício 17, letra B
  
  function multiplicaArrayPor2S(array) {
    // implemente sua lógica aqui
+  arrayResposta =[]
+    let numElementos = array.length
+    for (let i=0; i<numElementos; i++) {
+       arrayResposta[i] = String(array[i]*2)
+      } 
+    return arrayResposta
  }
  
  // Exercício 17, letra C
  
  function verificaParidade(array) {
     // implemente sua lógica aqui
+    arrayResposta =[]
+    let j=0
+    let numElementos = array.length
+    for (let i=0; i<numElementos; i++) {
+       if ((array[i]%2)===0){
+         arrayResposta[j] = `${array[i]} é par` 
+         j+=1
+       } else {
+         arrayResposta[j] = `${array[i]} é ímpar` 
+         j+=1
+       }
+      } 
+    return arrayResposta
  }
  
  // Exercício 18
