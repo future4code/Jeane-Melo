@@ -261,95 +261,133 @@ function criaRetangulo(lado1, lado2) {
 
 function anonimizaPessoa(pessoa) {
    // implemente sua lógica aqui
+   pessoa.nome="ANÔNIMO"
+   return pessoa
 }
 
 // Exercício 16
 
 const arrayDePessoas = [
-  { nome: "Pedro", idade: 20 },
-  { nome: "João", idade: 10 },
-  { nome: "Paula", idade: 12 },
-  { nome: "Artur", idade: 89 } 
-]
+   { nome: "Pedro", idade: 20 },
+   { nome: "João", idade: 10 },
+   { nome: "Paula", idade: 12 },
+   { nome: "Artur", idade: 89 } 
+ ]
+ 
+ // Exercício 16, letra A
+ 
+ function maioresDe18(arrayDePessoas) {
+    // implemente sua lógica aqui
+    pessoasAdultas =[]
+    let j=0
+    let numElementos = arrayDePessoas.length
+    for (let i=0; i<numElementos; i++) {
+       if (arrayDePessoas[i].idade >= 18) {
+          pessoasAdultas[j] = arrayDePessoas[i]
+          j+=1
+       } 
+    }
+    return pessoasAdultas
 
-// Exercício 16, letra A
-
-function maioresDe18(arrayDePessoas) {
+ }
+ 
+ // Exercício 16, letra B
+ 
+ function menoresDe18(arrayDePessoas) {
+    // implemente sua lógica aqui
+    pessoasMenoresDe18 =[]
+    let j=0
+    let numElementos = arrayDePessoas.length
+    for (let i=0; i<numElementos; i++) {
+       if (arrayDePessoas[i].idade < 18) {
+          pessoasMenoresDe18[j] = arrayDePessoas[i]
+          j+=1
+       } 
+    }
+    return pessoasMenoresDe18
+ }
+ 
+ // Exercício 17, letra A
+ 
+ function multiplicaArrayPor2(array) {
+    // implemente sua lógica aqui
+ }
+ 
+ // Exercício 17, letra B
+ 
+ function multiplicaArrayPor2S(array) {
    // implemente sua lógica aqui
-}
-
-// Exercício 16, letra B
-
-function menoresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
-}
-
-// Exercício 17, letra A
-
-function multiplicaArrayPor2(array) {
-   // implemente sua lógica aqui
-}
-
-// Exercício 17, letra B
-
-function multiplicaArrayPor2S(array) {
-  // implemente sua lógica aqui
-}
-
-// Exercício 17, letra C
-
-function verificaParidade(array) {
-   // implemente sua lógica aqui
-}
-
-// Exercício 18
-
-const pessoas = [
-  { nome: "Paula", idade: 12, altura: 1.8},
-  { nome: "João", idade: 20, altura: 1.3},
-  { nome: "Pedro", idade: 15, altura: 1.9},
-  { nome: "Luciano", idade: 22, altura: 1.8},
-  { nome: "Artur", idade: 10, altura: 1.2},
-  { nome: "Soter", idade: 70, altura: 1.9}
-]
-
-//Exercício 18, letra A
-
-function retornaPessoasAutorizadas(pessoas) {
-   // implemente sua lógica aqui
-}
-
-
-// Exercício 18, letra B
-
-function retornaPessoasNaoAutorizadas(pessoas) {
-   // implemente sua lógica aqui
-}
-
-//Exercício 19
-
-const consultas = [
-  { nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
-  { nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
-  { nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
-  { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+ }
+ 
+ // Exercício 17, letra C
+ 
+ function verificaParidade(array) {
+    // implemente sua lógica aqui
+ }
+ 
+ // Exercício 18
+ 
+ const pessoas = [
+   { nome: "Paula", idade: 12, altura: 1.8},
+   { nome: "João", idade: 20, altura: 1.3},
+   { nome: "Pedro", idade: 15, altura: 1.9},
+   { nome: "Luciano", idade: 22, altura: 1.8},
+   { nome: "Artur", idade: 10, altura: 1.2},
+   { nome: "Soter", idade: 70, altura: 1.9}
+ ]
+ 
+ //Exercício 18, letra A
+ 
+ function retornaPessoasAutorizadas() {
+    // implemente sua lógica aqui
+ }
+ 
+ 
+ // Exercício 18, letra B
+ 
+ function retornaPessoasNaoAutorizadas() {
+    // implemente sua lógica aqui
+ }
+ 
+ //Exercício 19
+ 
+ const consultasNome = [
+    { nome: "João", dataDaConsulta: "01/10/2021" },
+    { nome: "Pedro", dataDaConsulta: "02/07/2021" },
+    { nome: "Paula", dataDaConsulta: "03/11/2021" },
+    { nome: "Márcia",  dataDaConsulta: "04/05/2021" }
   ]
-
-function retornaEmailConsulta(consultas) {
-  // implemente sua lógica aqui
-}
-
-//Exercício 20
-
-const contas = [
-  { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
-  { cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
-  { cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
-  { cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
-  { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
-  { cliente: "Soter", saldoTotal: 1200, compras: [] }
-]
-
-function atualizaSaldo() {
-  // implemente sua lógica aqui
-}
+  
+  //Exercício 19, letra A
+  
+  function ordenaPorNome() {
+   
+  }
+  
+  // Exercício 19, letra B
+  
+  const consultasData = [
+    { nome: "João", dataDaConsulta: "01/10/2021" },
+    { nome: "Pedro", dataDaConsulta: "02/07/2021" },
+    { nome: "Paula", dataDaConsulta: "03/11/2021" },
+    { nome: "Márcia",  dataDaConsulta: "04/05/2021" }
+  ]
+  
+  function ordenaPorData() {
+  
+  }
+ 
+ //Exercício 20
+ 
+ const contas = [
+   { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+   { cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+   { cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+   { cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+   { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+   { cliente: "Soter", saldoTotal: 1200, compras: [] }
+ ]
+ 
+ function atualizaSaldo() {
+   // implemente sua lógica aqui
+ }
