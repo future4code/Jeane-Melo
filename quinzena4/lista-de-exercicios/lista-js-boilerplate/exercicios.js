@@ -360,11 +360,23 @@ const arrayDePessoas = [
    { nome: "Artur", idade: 10, altura: 1.2},
    { nome: "Soter", idade: 70, altura: 1.9}
  ]
- 
+ //A regra para entrar na montanha russa do 
+ //terror é: ter, no mínimo, 1.5m de altura; ser mais velho do que 14 anos e mais novo do que 60 anos.
  //Exercício 18, letra A
  
  function retornaPessoasAutorizadas() {
     // implemente sua lógica aqui
+    pessoasAutorizadas =[]
+    let j=0
+    let numElementos = pessoas.length
+    for (let i=0; i<numElementos; i++) {
+       if (((pessoas[i].idade > 14) &&  (pessoas[i].idade < 60)) && (pessoas[i].altura >= 1.5)){
+         pessoasAutorizadas[j] = pessoas[i]
+         j+=1
+       }
+    
+      }
+    return pessoasAutorizadas
  }
  
  
@@ -372,6 +384,17 @@ const arrayDePessoas = [
  
  function retornaPessoasNaoAutorizadas() {
     // implemente sua lógica aqui
+    pessoasNaoAutorizadas =[]
+    let j=0
+    let numElementos = pessoas.length
+    for (let i=0; i<numElementos; i++) {
+       if (((pessoas[i].idade <= 14) ||  (pessoas[i].idade >= 60)) || (pessoas[i].altura < 1.5)){
+         pessoasNaoAutorizadas[j] = pessoas[i]
+         j+=1
+       }
+    
+      }
+    return pessoasNaoAutorizadas
  }
  
  //Exercício 19
