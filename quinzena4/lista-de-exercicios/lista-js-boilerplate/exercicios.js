@@ -138,8 +138,9 @@ return {
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
-  /* let segundoMaior = array[0]
-   let segundoMenor = array[0]
+   //Resposta 10 sem usar ordenação
+   let segundoMaior = -100000
+   let segundoMenor = 100000
    let arrayResposta =[]
    let numElementos = array.length
    let maiorElemento = array[0]
@@ -174,10 +175,14 @@ function segundoMaiorEMenor(array) {
    }
    arrayResposta[0] = segundoMaior
    arrayResposta[1] = segundoMenor
-   return arrayResposta */
+   return arrayResposta
+}
 
+/*
 
- let numElementos = array.length
+// Resposta 10, ordenando o array através do Insertion Sort
+
+   let numElementos = array.length
    let arrayOrdenado = []
    let chaveAtual 
    let indiceWhile
@@ -194,8 +199,9 @@ function segundoMaiorEMenor(array) {
    arrayResposta[0]= array[numElementos-2]
    arrayResposta[1]= array[1]
 return arrayResposta
-
 }
+*/
+
 
 //Exercício 11
 
