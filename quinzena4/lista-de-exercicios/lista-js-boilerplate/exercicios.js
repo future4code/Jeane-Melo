@@ -473,4 +473,14 @@ return consultasPorNome
  
  function atualizaSaldo() {
    // implemente sua lógica aqui
+   let numElementos = contas.length
+   for (let i=0; i<numElementos; i++){
+      let numCompras = contas[i].compras.length
+      let totalCompras =0
+      for (let j=0; j<numCompras; j++){
+         totalCompras= totalCompras + contas[i].compras[j]
+      }
+      contas[i].saldoTotal = (contas[i].saldoTotal - totalCompras)
+   }
+   return contas
  }
