@@ -409,9 +409,24 @@ const arrayDePessoas = [
   //Exercício 19, letra A
   
   function ordenaPorNome() {
+
+   let numElementos = consultasNome.length
+   let consultasPorNome = consultasNome
+   let chaveAtual 
+   let indiceWhile
+   for (let j=1; j<numElementos; j++){
+      chaveAtual = consultasPorNome[j]
+      indiceWhile = j-1
+      while ((indiceWhile>-1) && (consultasPorNome[indiceWhile].nome.toLowerCase() > chaveAtual.nome.toLowerCase())) {
+         consultasPorNome[indiceWhile + 1] = consultasPorNome[indiceWhile]
+         indiceWhile = indiceWhile -1
+      }
+      consultasPorNome[indiceWhile+1] = chaveAtual
+   }
+return consultasPorNome
    
   }
-  
+
   // Exercício 19, letra B
   
   const consultasData = [
@@ -422,7 +437,27 @@ const arrayDePessoas = [
   ]
   
   function ordenaPorData() {
-  
+  let numElementos = consultasData.length
+  let chaveAtual 
+  let indiceWhile
+  let dataChave
+  let dataLista
+  for (let j=1; j<numElementos; j++){
+     chaveAtual = consultasData[j]
+     indiceWhile = j-1
+     dataChave = new Date(chaveAtual.dataDaConsulta)
+     dataLista = new Date(consultasData[indiceWhile].dataDaConsulta)
+     while ((indiceWhile>-1) && (dataLista.toDateString() > dataChave.toDateString())) {
+        consultasData[indiceWhile + 1] = consultasData[indiceWhile]
+        indiceWhile = indiceWhile -1
+        if (indiceWhile !== -1){
+          dataLista = new Date(consultasData[indiceWhile].dataDaConsulta)
+         }
+      }
+     consultasData[indiceWhile+1] = chaveAtual
+  }
+ return consultasData
+
   }
  
  //Exercício 20
